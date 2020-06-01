@@ -19,8 +19,8 @@ public class Burger {
         this.name = name;
     }
 
-    public void addAddition(String name, double basePrice){
-        Addition addition = new Addition(name, basePrice);
+    public void addAddition(String name, double price){
+        Addition addition = new Addition(name, price);
         switch (additionsTotal){
             case 0:
                 addition1 = addition;
@@ -43,7 +43,6 @@ public class Burger {
 
     public void receipt(){
         System.out.println("Base prise: " + basePrice);
-        //System.out.println("Number of additions: " + additionsTotal);
         additionsReceipt();
         double totalPrice = calculateTotal();
         System.out.println("Total: ..................." + (totalPrice + basePrice));
